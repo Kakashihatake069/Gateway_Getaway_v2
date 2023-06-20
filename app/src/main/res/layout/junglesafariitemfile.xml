@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/round_bg"
+    android:layout_margin="@dimen/_5sdp"
+    android:id="@+id/loutjunglesafari">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+        <ImageView
+            android:id="@+id/txtjungleimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+        <ImageView
+            android:id="@+id/likeiconjungle"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/heart"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txtjunglename"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:fontFamily="@font/aovelsansrounded"
+
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+<!--        <ImageView-->
+<!--            android:layout_width="@dimen/_15sdp"-->
+<!--            android:layout_height="@dimen/_15sdp"-->
+<!--            android:padding="@dimen/_3sdp"-->
+<!--          />-->
+
+        <TextView
+            android:id="@+id/txtjunglelocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"
+            android:fontFamily="@font/aovelsansrounded"
+
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtjungleamount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:fontFamily="@font/aovelsansrounded"
+
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_5sdp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:layout_marginBottom="@dimen/_3sdp">
+
+        <TextView
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_20sdp"
+            android:fontFamily="@font/aovelsansrounded"
+            android:text="Free cancellation"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/_5sdp"
+            />
+        <ImageView
+            android:id="@+id/jungle_addtocart"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:src="@drawable/addtocart2"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

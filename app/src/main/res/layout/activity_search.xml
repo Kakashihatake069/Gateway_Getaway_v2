@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SearchActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/circle"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+
+
+            <EditText
+                android:id="@+id/edtsearchBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Search"
+                android:padding="@dimen/_5sdp"
+                tools:ignore="TouchTargetSizeCheck"
+                android:layout_weight="4"/>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imgsearch"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/explore"
+                android:layout_gravity="right"
+                android:paddingRight="@dimen/_5sdp"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+   >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

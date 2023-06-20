@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/explore_bottom"
+        android:title="Explore"
+        android:icon="@drawable/explore"
+      />
+
+    <item android:id="@+id/booking_bottom"
+        android:title="Bookings"
+        android:icon="@drawable/booking"/>
+
+    <item android:id="@+id/wishlist_bottom"
+        android:title="Wishlist"
+        android:icon="@drawable/heart"
+        />
+    <item android:id="@+id/profile_bottom"
+        android:title="Profile"
+        android:icon="@drawable/avatar"
+        />
+</menu>
+
+

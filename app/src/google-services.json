@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "336177260823",
+    "project_id": "gateway-getaways-7a6aa",
+    "storage_bucket": "gateway-getaways-7a6aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336177260823:android:eb68a22f9d7d247f10ef52",
+        "android_client_info": {
+          "package_name": "com.example.gatewaygetaways"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336177260823-vpkor5jlvh6eieocpoij753m25pgsd52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfSc8QPsw-Jb8IXHaZLKjIFsq4yDqbJHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336177260823-vpkor5jlvh6eieocpoij753m25pgsd52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

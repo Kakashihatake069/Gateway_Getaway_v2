@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TypesOfLoginActivity"
+    android:orientation="vertical"
+    android:background="#245953">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:src="@drawable/familyvace"
+        android:scaleType="centerCrop"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" A JOURNEY OF A THOUSAND MILES BEGINS WITH A SINGLE STEP, COME AND STEP IN YOUR JOURNEY WITH US."
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/aovelsansrounded"
+        android:layout_marginTop="@dimen/_15sdp"
+        />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btnGoogleSignin"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+       />
+
+    <LinearLayout
+        android:id="@+id/loutemaillogin"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_background">
+
+        <ImageView
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/email"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue with email"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_30sdp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
