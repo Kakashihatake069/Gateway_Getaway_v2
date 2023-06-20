@@ -363,6 +363,9 @@ class DisplayplaceActivity : AppCompatActivity() {
 
     }
 
+
+
+
     private fun payment() {
         binding.txtaddtocart.setOnClickListener {
             // on below line we are getting
