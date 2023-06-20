@@ -1,6 +1,5 @@
 package com.example.gatewaygetaways.fragment
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -12,12 +11,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.gatewaygetaways.activity.DisplayplaceActivity
-import com.example.gatewaygetaways.adapter.*
+import com.example.gatewaygetaways.adapter.CulturalSiteAdapter
+import com.example.gatewaygetaways.adapter.JungleSafariAdapter
+import com.example.gatewaygetaways.adapter.MountainAdapter
+import com.example.gatewaygetaways.adapter.TrendindDestinationAdapter
+import com.example.gatewaygetaways.adapter.WarmDestinationAdapter
 import com.example.gatewaygetaways.databinding.FragmentExploreBinding
 import com.example.gatewaygetaways.modelclass.ModelClassForDestinaion
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 
 
@@ -67,16 +74,6 @@ class ExploreFragment : Fragment() {
         return exploreBinding.root
 
     }
-
-//    private fun workingcode() {
-//        exploreBinding.txttitleheading.setOnClickListener{
-//            val nextfragment = BookingFragment()
-//            val fragmentTransaction = requireFragmentManager().beginTransaction()
-//            fragmentTransaction.replace(R.id.frameofbookingfragment,nextfragment)
-//            fragmentTransaction.addToBackStack(null)
-//            fragmentTransaction.commit()
-//        }
-//    }
 
     private fun trendingdestination() {
         adaptertrendingdestination = TrendindDestinationAdapter(this, topdestinationlist) {
@@ -282,15 +279,7 @@ class ExploreFragment : Fragment() {
             val args = Bundle()
             args.putString("name", it.name)
             Log.e("TAG", "Junglename: " + it.name)
-//            val args = Bundle()
-//            args.putString("name", it.name)
-//            Log.e("TAG", "junlenamevaluename: "+it.name)
-//            val nextfragment = BookingFragment()
-//            nextfragment.setArguments(args)
-//            Log.e("TAG", "jungleargsvalue: "+args )
-//            val fragmentTransaction = requireFragmentManager().beginTransaction()
-//            fragmentTransaction.replace(R.id.frameLayout, nextfragment)
-//            fragmentTransaction.commit()
+
 
             val jungleintent = Intent(activity, DisplayplaceActivity::class.java)
             jungleintent.putExtra("name", it.name)
@@ -338,7 +327,7 @@ class ExploreFragment : Fragment() {
                 })
 
 
-        },{cart,name->
+        }, { cart, name ->
             firebaseDatabase.child("junglesafari").child(name).child("details")
                 .addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -430,12 +419,7 @@ class ExploreFragment : Fragment() {
             val args = Bundle()
             args.putString("name", it.name)
             Log.e("TAG", "Mountainname: " + it.name)
-//                val nextfragment = GoogleMapsFragment()
-//                nextfragment.setArguments(args)
-//                Log.e("TAG", "initviewars: "+args )
-//                val fragmentTransaction = requireFragmentManager().beginTransaction()
-//                fragmentTransaction.replace(R.id.frameLayout, nextfragment)
-//                fragmentTransaction.commit()
+
             // like function here
             val intent = Intent(activity, DisplayplaceActivity::class.java)
             intent.putExtra("name", it.name)
@@ -546,8 +530,7 @@ class ExploreFragment : Fragment() {
                     data?.image = i.child("image").value.toString()
                     data?.location = i.child("location").value.toString()
                     data?.name = i.child("name").value.toString()
-//                    data?.rateing=i.child("rateing").value.toString()
-//                    data?.details=i.child("details").value.toString()
+
                 }
 
 

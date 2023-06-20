@@ -12,7 +12,6 @@ import com.bumptech.glide.Glide
 import com.example.gatewaygetaways.modelclass.ModelClassForDestinaion
 import com.example.gatewaygetaways.R
 import com.example.gatewaygetaways.fragment.ExploreFragment
-import com.example.gatewaygetaways.modelclass.ModelClassForPlaceDetails
 
 class JungleSafariAdapter(var context: ExploreFragment,var junglelist: ArrayList<ModelClassForDestinaion>, var jungleclick : (ModelClassForDestinaion) -> Unit, var likejungledata : (Int,String) -> Unit, var addtocartjungle : (Int,String) -> Unit ) :
     RecyclerView.Adapter<JungleSafariAdapter.MyViewHolder>() {

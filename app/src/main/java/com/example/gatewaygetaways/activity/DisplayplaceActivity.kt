@@ -19,11 +19,8 @@ import com.bumptech.glide.Glide
 import com.example.gatewaygetaways.R
 import com.example.gatewaygetaways.adapter.HotelAdapter
 import com.example.gatewaygetaways.databinding.ActivityDisplayplaceBinding
-import com.example.gatewaygetaways.fragment.BookingFragment
 import com.example.gatewaygetaways.fragment.ExploreFragment
 import com.example.gatewaygetaways.fragment.GoogleMapsFragment
-import com.example.gatewaygetaways.fragment.LikeModelCass
-import com.example.gatewaygetaways.modelclass.ModelClassForDestinaion
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -42,8 +39,6 @@ class DisplayplaceActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityDisplayplaceBinding
     lateinit var firebaseDatabase: DatabaseReference
-    lateinit var mountainlist: ArrayList<ModelClassForDestinaion>
-    lateinit var adapterhotel: HotelAdapter
     lateinit var auth: FirebaseAuth
 
     lateinit var notificationManager: NotificationManager
@@ -81,18 +76,18 @@ class DisplayplaceActivity : AppCompatActivity() {
             // for trending destination
 
             firebaseDatabase = FirebaseDatabase.getInstance().reference
-            var trendingvalue = intent.getStringExtra("name").toString()
+            val trendingvalue = intent.getStringExtra("name").toString()
             Log.e("TAG", "initview " + trendingvalue)
 
             firebaseDatabase.child("trendingdestination").child(trendingvalue).child("details")
                 .addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
-                        var image4 = snapshot.child("image").value.toString()
-                        var name4 = snapshot.child("name").value.toString()
-                        var rateing4 = snapshot.child("rateing").value.toString()
-                        var amount4 = snapshot.child("amount").value.toString()
-                        var details4 = snapshot.child("info").value.toString()
-                        var location4 = snapshot.child("location").value.toString()
+                        val image4 = snapshot.child("image").value.toString()
+                        val name4 = snapshot.child("name").value.toString()
+                        val rateing4 = snapshot.child("rateing").value.toString()
+                        val amount4 = snapshot.child("amount").value.toString()
+                        val details4 = snapshot.child("info").value.toString()
+                        val location4 = snapshot.child("location").value.toString()
 
 //                        val mFragmentManagertopdestination = supportFragmentManager
 //                        val mFragmentTransactiontopdestination = mFragmentManagertopdestination.beginTransaction()
@@ -200,12 +195,12 @@ class DisplayplaceActivity : AppCompatActivity() {
             firebaseDatabase.child("junglesafari").child(junglevalue).child("details")
                 .addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
-                        var image1 = snapshot.child("image").value.toString()
-                        var name1 = snapshot.child("name").value.toString()
-                        var rateing1 = snapshot.child("rateing").value.toString()
-                        var amount1 = snapshot.child("amount").value.toString()
-                        var info1 = snapshot.child("info").value.toString()
-                        var location1 = snapshot.child("location").value.toString()
+                        val image1 = snapshot.child("image").value.toString()
+                        val name1 = snapshot.child("name").value.toString()
+                        val rateing1 = snapshot.child("rateing").value.toString()
+                        val amount1 = snapshot.child("amount").value.toString()
+                        val info1 = snapshot.child("info").value.toString()
+                        val location1 = snapshot.child("location").value.toString()
 
                         val mFragmentManagerjunglesafari = supportFragmentManager
                         val mFragmentTransactionjunglesafari =
@@ -308,12 +303,12 @@ class DisplayplaceActivity : AppCompatActivity() {
             firebaseDatabase.child("culturalsites").child(beachvalue).child("details")
                 .addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
-                        var image3 = snapshot.child("image").value.toString()
-                        var name3 = snapshot.child("name").value.toString()
-                        var rateing3 = snapshot.child("rateing").value.toString()
-                        var amounnt3 = snapshot.child("amount").value.toString()
-                        var info3 = snapshot.child("info").value.toString()
-                        var location3 = snapshot.child("location").value.toString()
+                        val image3 = snapshot.child("image").value.toString()
+                        val name3 = snapshot.child("name").value.toString()
+                        val rateing3 = snapshot.child("rateing").value.toString()
+                        val amounnt3 = snapshot.child("amount").value.toString()
+                        val info3 = snapshot.child("info").value.toString()
+                        val location3 = snapshot.child("location").value.toString()
 
                         val mFragmentManagertemple = supportFragmentManager
                         val mFragmentTransactiontemple = mFragmentManagertemple.beginTransaction()
@@ -354,7 +349,6 @@ class DisplayplaceActivity : AppCompatActivity() {
                     }
 
                 })
-
 
         }
     }
@@ -452,11 +446,6 @@ class DisplayplaceActivity : AppCompatActivity() {
             notificationChannel = NotificationChannel(channelId, description, NotificationManager.IMPORTANCE_HIGH)
             notificationChannel.enableLights(true)
             notificationChannel.lightColor = Color.GREEN
-
-
-
-
-
 
             notificationChannel.enableVibration(false)
             notificationManager.createNotificationChannel(notificationChannel)

@@ -9,10 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.gatewaygetaways.R
 import com.example.gatewaygetaways.fragment.BookingFragment
+import com.example.gatewaygetaways.modelclass.ModelClassForDestinaion
 
-import com.example.gatewaygetaways.modelclass.ModelClassForPlaceDetails
-
-class BookingTripAdapter (var context: BookingFragment, var bookdestinationlist: ArrayList<ModelClassForPlaceDetails>) : RecyclerView.Adapter<BookingTripAdapter.MyViewHolder>() {
+class BookingTripAdapter (var context: BookingFragment, var bookdestinationlist: ArrayList<ModelClassForDestinaion>) : RecyclerView.Adapter<BookingTripAdapter.MyViewHolder>() {
     class MyViewHolder(itemview : View) : RecyclerView.ViewHolder(itemview) {
 
         var imgplaceimage: ImageView = itemview.findViewById(R.id.imgplaceimage)
@@ -24,9 +23,9 @@ class BookingTripAdapter (var context: BookingFragment, var bookdestinationlist:
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        var v =
+        val v =
             LayoutInflater.from(parent.context).inflate(R.layout.bookingdestinationitemfile, parent, false)
-        var view = MyViewHolder(v)
+        val view = MyViewHolder(v)
         return view
     }
 
@@ -40,11 +39,6 @@ class BookingTripAdapter (var context: BookingFragment, var bookdestinationlist:
 
     override fun getItemCount(): Int {
             return bookdestinationlist.size
-    }
-    fun updatedetailslist(bookdestinationlist: java.util.ArrayList<ModelClassForPlaceDetails>) {
-        this.bookdestinationlist = ArrayList()
-        this.bookdestinationlist = bookdestinationlist
-        notifyDataSetChanged()
     }
 
 }

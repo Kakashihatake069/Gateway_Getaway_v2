@@ -1,4 +1,4 @@
-package com.example.gatewaygetaways.fragment
+package com.example.gatewaygetaways.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,7 +11,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.gatewaygetaways.R
-import com.example.gatewaygetaways.adapter.LikeAdapter
 import com.example.gatewaygetaways.modelclass.ModelClassForDestinaion
 
 class AddToCartAdapter(var context: Context, var AddToCart: (Int,String) -> Unit) : RecyclerView.Adapter<AddToCartAdapter.MyViewHolder>() {
@@ -24,13 +23,13 @@ class AddToCartAdapter(var context: Context, var AddToCart: (Int,String) -> Unit
         var imgAddCart: ImageView = itemview.findViewById(R.id.imgiconCart)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AddToCartAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         var v = LayoutInflater.from(parent.context).inflate(R.layout.add_to_cart_iemfile, parent, false)
-        var view = AddToCartAdapter.MyViewHolder(v)
+        var view = MyViewHolder(v)
         return view
     }
 
-    override fun onBindViewHolder(holder: AddToCartAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.txtcartname.text = cartlist[position].name
         holder.txt_cart_location.text = cartlist[position].location
         holder.txt_cart_amount.text = cartlist[position].amount
