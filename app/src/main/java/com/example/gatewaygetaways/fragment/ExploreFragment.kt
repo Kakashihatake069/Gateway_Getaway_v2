@@ -18,6 +18,12 @@ import com.example.gatewaygetaways.adapter.TrendindDestinationAdapter
 import com.example.gatewaygetaways.adapter.WarmDestinationAdapter
 import com.example.gatewaygetaways.databinding.FragmentExploreBinding
 import com.example.gatewaygetaways.modelclass.ModelClassForDestinaion
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -50,6 +56,7 @@ class ExploreFragment : Fragment() {
     lateinit var adapterculturalsite: CulturalSiteAdapter
     lateinit var adaptertrendingdestination: TrendindDestinationAdapter
 
+
     lateinit var auth: FirebaseAuth
 
     var userclickedon = "Auli Mountain"
@@ -61,17 +68,56 @@ class ExploreFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         exploreBinding = FragmentExploreBinding.inflate(layoutInflater, container, false)
-
         auth = Firebase.auth
+
+        MobileAds.initialize(requireActivity()) {}
 
         initview()
         junglesafari()
         warmdestination()
         culturalsite()
         trendingdestination()
+        googleAds()
 //        workingcode()
 
         return exploreBinding.root
+
+    }
+
+    private fun googleAds() {
+
+
+        val adRequest = AdRequest.Builder().build()
+        exploreBinding.adView.loadAd(adRequest)
+
+        exploreBinding.adView.adListener = object: AdListener() {
+            override fun onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            override fun onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+
+            override fun onAdFailedToLoad(adError : LoadAdError) {
+                Log.e("TAG", "onAdFailedToLoad: "+adError.message )
+            }
+
+            override fun onAdImpression() {
+                // Code to be executed when an impression is recorded
+                // for an ad.
+            }
+
+            override fun onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            override fun onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+        }
 
     }
 

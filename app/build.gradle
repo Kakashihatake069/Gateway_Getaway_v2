@@ -81,4 +81,7 @@ dependencies {
 
     // razor pay payment gateway
     implementation 'com.razorpay:checkout:1.6.26'
+
+    // google ads integration
+    implementation 'com.google.android.gms:play-services-ads:22.1.0'
 }
