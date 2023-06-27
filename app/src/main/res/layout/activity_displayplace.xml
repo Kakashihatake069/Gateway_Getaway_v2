@@ -222,24 +222,24 @@
             <!--                android:layout_height="@dimen/_200sdp"-->
             <!--                tools:context=".activity.DisplayplaceActivity" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/aovelsansrounded"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="@dimen/_10sdp"
-                android:text="Hotels Near By"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_25sdp"-->
+<!--                android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                android:fontFamily="@font/aovelsansrounded"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingHorizontal="@dimen/_10sdp"-->
+<!--                android:text="Hotels Near By"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/_15sdp"-->
+<!--                android:textStyle="bold" />-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcvhotel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rcvhotel"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
 
-            </androidx.recyclerview.widget.RecyclerView>
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
