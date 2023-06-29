@@ -74,14 +74,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:orientation="horizontal"
         android:layout_marginBottom="@dimen/_3sdp">
 
         <TextView
-            android:layout_width="@dimen/_220sdp"
-            android:layout_height="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_20sdp"
             android:fontFamily="@font/aovelsansrounded"
             android:text="Free cancellation"
             android:textColor="@color/white"
@@ -89,14 +89,11 @@
             />
         <ImageView
             android:id="@+id/imgiconCart"
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_margin="@dimen/_5sdp"
-            android:layout_weight="2"
             android:src="@drawable/addtocart2"
             />
-
-
     </LinearLayout>
 
 

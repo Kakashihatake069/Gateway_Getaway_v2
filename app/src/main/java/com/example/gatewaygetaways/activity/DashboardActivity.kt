@@ -131,7 +131,6 @@ class DashboardActivity : AppCompatActivity() {
 
         dashboardBinding.imgsearchbtn.setOnClickListener {
             val intent = Intent(this, SearchActivity::class.java)
-
             startActivity(intent)
         }
 
