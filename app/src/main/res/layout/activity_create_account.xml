@@ -31,7 +31,7 @@
             android:layout_gravity="center"
             android:background="@drawable/round_bg_2"
             android:text="Pick Image"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_weight="1"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -43,7 +43,7 @@
             android:layout_gravity="center"
             android:background="@drawable/round_bg_2"
             android:text="Upload"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             />
 
     </LinearLayout>
@@ -162,13 +162,14 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/_10sdp"
         android:text="Create Account"
+        android:textColor="@color/white"
         android:background="@drawable/round_bg_2"
         android:padding="@dimen/_10sdp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_100sdp">
+        android:layout_marginTop="@dimen/_10sdp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -176,10 +177,10 @@
             android:text="Already have a account?" />
 
         <TextView
+            android:id="@+id/txtLoginPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="  Login "
-            android:id="@+id/txtLoginPage"
             android:textColor="@color/black"
             android:textStyle="bold" />
     </LinearLayout>
